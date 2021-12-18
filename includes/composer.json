@@ -1,0 +1,23 @@
+{
+    "authors": [
+        {
+            "name": "Barry Ceelen",
+            "email": "b@rryceelen.com",
+            "homepage": "https://github.com/functionsfile",
+            "role": "Developer"
+        }
+    ],
+    "description": "Your one-stop shop for removing WordPress comment functionality",
+    "homepage": "https://github.com/functionsfile/uncomment",
+    "keywords": [
+        "comments",
+        "plugin",
+        "wordpress"
+    ],
+    "license": "GPL-3.0-or-later",
+    "name": "functionsfile/uncomment",
+    "require": {
+        "composer/installers":"^2.0"
+    },
+    "type": "wordpress-muplugin"
+}
