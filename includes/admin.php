@@ -7,9 +7,6 @@
 
 namespace Uncomment\Admin;
 
-// Do not check for plugin updates.
-add_filter( 'site_transient_update_plugins', __NAMESPACE__ . '\remove_update_nag' );
-
 // Remove admin pages.
 add_action( 'admin_init', __NAMESPACE__ . '\remove_admin_pages' );
 
@@ -36,23 +33,6 @@ add_filter( 'show_recent_comments_widget_style', '__return_false' );
 
 // Enqueue editor script.
 add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\remove_comments_block' );
-
-/**
- * Do not check for plugin updates.
- *
- * @param array|string $value Value of site transient.
- * @return array|string
- */
-function remove_update_nag( $value ) {
-
-	if ( isset( $value->response[ plugin_basename( __FILE__ ) ] )
-		&& ! empty( $value->response[ plugin_basename( __FILE__ ) ] )
-	) {
-		unset( $value->response[ plugin_basename( __FILE__ ) ] );
-	}
-
-	return $value;
-}
 
 /**
  * Remove admin pages.
