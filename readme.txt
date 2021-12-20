@@ -1,6 +1,6 @@
 === Uncomment ===
 Contributors: functionsfile, barryceelen
-Tags: comments
+Tags: comments, spam comments, disable, remove, remove comments
 Requires at least: 4.6
 Tested up to: 5.8
 Requires PHP: 5.3
@@ -37,13 +37,13 @@ Uncomment contains a `GitHub Plugin URI` plugin header to support updates via th
 
 = Can I enable comments for a specific post or post type? =
 
-Uncomment is designed to disable or hide all commenting functionality from your WordPress site. There are no additional settings for enabling comments on specific posts or post types.
+Uncomment is designed to completely disable or hide all comments and commenting functionality on your WordPress site. There are no settings for enabling comments on specific posts or post types.
 
 = Does this plugin remove existing comments? =
 
 Uncomment does not remove any existing comments from the database.
 
-Note that while Uncomment does its best to automatically hide or disable any commment-related elements via WordPress core hooks, filters and functions, your theme may use its own commenting functions and still show existing comments with a post.
+Note that Uncomment uses WordPress core hooks, filters and functions to automatically hide or disable any comments and commment-related elements. Your theme may be using its own custom functions and might still show existing comments with a post.
 
 == Changelog ==
 
