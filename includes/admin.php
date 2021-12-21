@@ -20,7 +20,7 @@ add_action( 'admin_init', __NAMESPACE__ . '\remove_commentsdiv_meta_box' );
 add_action( 'admin_footer-index.php', __NAMESPACE__ . '\remove_welcome_panel_item' );
 
 // Remove Keyboard Shortcuts options from the profile page.
-add_action( 'personal_options', __NAMESPACE__ . '\remove_profile_items' );
+add_action( 'load-profile.php', __NAMESPACE__ . '\remove_profile_items' );
 
 // Remove the 'Discussion Settings' help tab from the post edit screen.
 add_action( 'admin_head-post.php', __NAMESPACE__ . '\remove_help_tabs', 10, 3 );
@@ -121,8 +121,10 @@ function remove_welcome_panel_item() {
  */
 function remove_profile_items() {
 
-	// phpcs:ignore
-	echo '<style type="text/css">.user-comment-shortcuts-wrap{display:none;}</style>';
+	wp_add_inline_style(
+		'forms',
+		'.user-comment-shortcuts-wrap{display:none;}'
+	);
 }
 
 /**
