@@ -124,6 +124,7 @@ function feed_links_extra( $args = array() ) {
 	}
 
 	if ( isset( $title ) && isset( $href ) ) {
+		// phpcs:ignore
 		echo '<link rel="alternate" type="' . esc_attr( feed_content_type() ) . '" title="' . esc_attr( $title ) . '" href="' . esc_url( $href ) . '" />' . "\n";
 	}
 }
