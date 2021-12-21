@@ -17,7 +17,7 @@ add_action( 'admin_menu', __NAMESPACE__ . '\remove_menu_items' );
 add_action( 'admin_init', __NAMESPACE__ . '\remove_commentsdiv_meta_box' );
 
 // Remove "Turn comments on or off" from the Welcome Panel.
-add_action( 'admin_footer-index.php', __NAMESPACE__ . '\remove_welcome_panel_item' );
+add_action( 'admin_head-index.php', __NAMESPACE__ . '\remove_welcome_panel_item' );
 
 // Remove Keyboard Shortcuts options from the profile page.
 add_action( 'load-profile.php', __NAMESPACE__ . '\remove_profile_items' );
@@ -98,20 +98,21 @@ function remove_commentsdiv_meta_box() {
  */
 function remove_welcome_panel_item() {
 
-	// phpcs:disable
-	?>
-	<script type="text/javascript">
-		//<![CDATA[
-		document.addEventListener( 'DOMContentLoaded', function() {
-			var el = document.querySelector( '.welcome-comments' );
-			if ( 'undefined' !== typeof el ) {
-				el.parentNode.remove();
-			}
-		});
-		//]]>
-	</script>
-	<?php
-	// phpcs:enable
+	$script = <<<TAG
+(function(){
+	document.addEventListener( 'DOMContentLoaded', function() {
+		var el = document.querySelector( '.welcome-comments' );
+		if ( el ) {
+			el.parentNode.remove();
+		}
+	});
+})();
+TAG;
+
+	wp_add_inline_script(
+		'common',
+		$script
+	);
 }
 
 /**
