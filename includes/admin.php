@@ -98,6 +98,7 @@ function remove_commentsdiv_meta_box() {
  */
 function remove_welcome_panel_item() {
 
+	// phpcs:disable
 	?>
 	<script type="text/javascript">
 		//<![CDATA[
@@ -110,6 +111,7 @@ function remove_welcome_panel_item() {
 		//]]>
 	</script>
 	<?php
+	// phpcs:enable
 }
 
 /**
@@ -119,6 +121,7 @@ function remove_welcome_panel_item() {
  */
 function remove_profile_items() {
 
+	// phpcs:ignore
 	echo '<style type="text/css">.user-comment-shortcuts-wrap{display:none;}</style>';
 }
 
