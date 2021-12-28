@@ -14,13 +14,13 @@ Your one-stop shop for removing WordPress comment functionality.
 
 While WordPress allows you to disable comments site-wide via the comments setting screen, the Uncomment plugin goes one step further and disables or hides all interface elements and other functionality related to comments on your WordPress site.
 
-Starting with Uncomment consists of just two steps: installing and activating the plugin. Uncomment is designed to disable or hide commenting functionality from your WordPress site without any additional settings. Uncomment also works great as a must-use plugin.
+Starting with Uncomment consists of just two steps: installing and activating the plugin. Uncomment is designed to disable or hide commenting functionality on your WordPress site without any additional settings. Uncomment also works great as a must-use plugin.
 
 Did we miss anything? Leave us a note on [Github](https://github.com/functionsfile/uncomment/issues/)
 
 == Installation ==
 
-Starting with Uncomment consists of just two steps: installing and activating the plugin. Uncomment is designed to disable or hide commenting functionality from your WordPress site without any additional settings. Uncomment also works great as a must-use plugin.
+Starting with Uncomment consists of just two steps: installing and activating the plugin. Uncomment is designed to disable or hide commenting functionality on your WordPress site without any additional settings. Uncomment also works great as a must-use plugin.
 
 ### Install Uncomment from within WordPress
 
@@ -45,7 +45,7 @@ Uncomment is designed to completely disable or hide all comments and commenting 
 
 Uncomment does not remove any existing comments from the database.
 
-Note that Uncomment uses WordPress core hooks, filters and functions to automatically hide or disable any comments and commment-related elements. Your theme may be using its own custom functions and might still show existing comments with a post.
+Note that Uncomment uses WordPress core hooks, filters and functions to automatically hide or disable any comments and comment-related elements. Your theme may be using its own custom functions and might still show existing comments with a post.
 
 == Changelog ==
 
