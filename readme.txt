@@ -24,14 +24,14 @@ Starting with Uncomment consists of just two steps: installing and activating th
 
 ### Install Uncomment from within WordPress
 
-1. Visit the Plugins page within your dashboard and select ‘Add New’;
-1. Search for ‘Uncomment’;
-1. Activate Uncomment from your Plugins page;
+1. Visit the Plugins page within your dashboard and select ‘Add New’
+1. Search for ‘Uncomment’
+1. Activate Uncomment from your Plugins page
 
 ### Install Uncomment manually
 
-1. Upload the ‘uncomment’ folder to the /wp-content/plugins/ directory;
-1. Activate the Uncomment plugin through the ‘Plugins’ menu in WordPress;
+1. Upload the ‘uncomment’ folder to the /wp-content/plugins/ directory
+1. Activate the Uncomment plugin through the ‘Plugins’ menu in WordPress
 
 Uncomment contains a `GitHub Plugin URI` plugin header to support updates via the [Git Updater](https://git-updater.com/) plugin.
 

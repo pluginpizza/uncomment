@@ -6,6 +6,18 @@ While WordPress allows you to disable comments site-wide via the comments settin
 
 Starting with Uncomment consists of just two steps: installing and activating the plugin. Uncomment is designed to disable or hide commenting functionality from your WordPress site without any additional settings. Uncomment also works great as a must-use plugin.
 
+## Installation
+
+Uncomment is hosted on the [WordPress plugin directory](https://wordpress.org/plugins/uncomment/) and can be installed via the WordPress dashboard.
+
+1. Visit the Plugins page within your WordPress dashboard and select ‘Add New’
+1. Search for ‘Uncomment’ and install the plugin
+1. Activate Uncomment from your Plugins page
+
+### Composer
+
+Uncomment can be added as a dependency to your project via the [wpackagist composer repository](https://wpackagist.org/search?q=uncomment).
+
 ## FAQ
 
 ### Does this plugin remove existing comments?
