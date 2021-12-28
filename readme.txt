@@ -1,6 +1,6 @@
 === Uncomment — Disable Comments ===
 Contributors: functionsfile, barryceelen
-Tags: comments, spam comments, disable, remove, remove comments
+Tags: comments, disable comments, spam comments, disable, remove, remove comments
 Requires at least: 4.6
 Tested up to: 5.8
 Requires PHP: 5.3
