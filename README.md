@@ -20,9 +20,9 @@ Uncomment can be added as a dependency to your project via the [wpackagist compo
 
 ## FAQ
 
-### Does this plugin remove existing comments?
+### Does this plugin delete existing comments from the database?
 
-Uncomment does not remove any existing comments from the database.
+Uncomment does not delete any existing comments from the database.
 
 ### I'm still seeing comments on my site?
 
@@ -32,4 +32,4 @@ If you spot any WordPress core comment functionality that should have been remov
 
 ### Can I enable comments for a specific post or post type?
 
-Uncomment is designed to remove all commenting functionality from your WordPress site. There are no additional settings to enable comments for specific posts or post types.
+Uncomment is designed to completely disable or hide all comments and commenting functionality on your WordPress site. It does not provide any settings to enable comments for specific posts or post types.

@@ -41,7 +41,7 @@ Uncomment contains a `GitHub Plugin URI` plugin header to support updates via th
 
 = Can I enable comments for a specific post or post type? =
 
-Uncomment is designed to completely disable or hide all comments and commenting functionality on your WordPress site. There are no settings for enabling comments on specific posts or post types.
+Uncomment is designed to completely disable or hide all comments and commenting functionality on your WordPress site. It does not provide any settings to enable comments for specific posts or post types.
 
 = Does this plugin delete existing comments from the database? =
 
