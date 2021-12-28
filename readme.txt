@@ -1,4 +1,4 @@
-=== Uncomment ===
+=== Uncomment — Disable Comments ===
 Contributors: functionsfile, barryceelen
 Tags: comments, spam comments, disable, remove, remove comments
 Requires at least: 4.6
@@ -8,9 +8,11 @@ Stable tag: 1.0.0
 License: GPLv3+
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-Your one-stop shop to disable and remove WordPress comments functionality.
+Your one-stop shop to completely disable comments and remove all comment functionality and interface elements from your theme and administration screens.
 
 == Description ==
+
+Your one-stop shop to completely disable comments and remove all comment functionality and interface elements from your theme and administration screens.
 
 While WordPress allows you to disable comments site-wide via the comments setting screen, the Uncomment plugin goes one step further and disables or hides all interface elements and other functionality related to comments on your WordPress site.
 
@@ -41,9 +43,9 @@ Uncomment contains a `GitHub Plugin URI` plugin header to support updates via th
 
 Uncomment is designed to completely disable or hide all comments and commenting functionality on your WordPress site. There are no settings for enabling comments on specific posts or post types.
 
-= Does this plugin remove existing comments? =
+= Does this plugin delete existing comments from the database? =
 
-Uncomment does not remove any existing comments from the database.
+Uncomment does not delete any existing comments from the database.
 
 Note that Uncomment uses WordPress core hooks, filters and functions to automatically hide or disable any comments and comment-related elements. Your theme may be using its own custom functions and might still show existing comments with a post.
 

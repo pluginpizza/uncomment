@@ -1,6 +1,6 @@
 # Uncomment WordPress Plugin
 
-Your one-stop shop for removing WordPress comment functionality.
+Your one-stop shop to completely disable comments and remove all comment functionality and interface elements from your theme and administration screens.
 
 While WordPress allows you to disable comments site-wide via the comments setting screen, the Uncomment plugin goes one step further and disables or hides all interface elements and functionality related to comments on your WordPress site.
 
