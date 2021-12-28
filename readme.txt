@@ -39,15 +39,19 @@ Uncomment contains a `GitHub Plugin URI` plugin header to support updates via th
 
 == Frequently Asked Questions ==
 
-= Can I enable comments for a specific post or post type? =
-
-Uncomment is designed to completely disable or hide all comments and commenting functionality on your WordPress site. It does not provide any settings to enable comments for specific posts or post types.
-
 = Does this plugin delete existing comments from the database? =
 
 Uncomment does not delete any existing comments from the database.
 
-Note that Uncomment uses WordPress core hooks, filters and functions to automatically hide or disable any comments and comment-related elements. Your theme may be using its own custom functions and might still show existing comments with a post.
+= Can I enable comments for a specific post or post type? =
+
+Uncomment is designed to completely disable or hide all comments and commenting functionality on your WordPress site. It does not provide any settings to enable comments for specific posts or post types.
+
+= I'm still seeing comments on my site? =
+
+Uncomment uses WordPress core actions, filters and functions to hide or disable comments and comment-related elements. It is possible that your theme or another plugin uses its own custom comment elements or functions. In that case, the Uncomment plugin is unable to remove those elements.
+
+If you spot any WordPress core comment functionality that should have been removed by the Uncomment plugin, please let us know by opening an [issue](https://github.com/functionsfile/uncomment/issues/) or [pull request](https://github.com/functionsfile/uncomment/pulls/) on Github.
 
 == Changelog ==
 
