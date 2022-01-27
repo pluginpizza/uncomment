@@ -4,7 +4,7 @@ Tags: comments, disable comments, spam comments, disable, remove, remove comment
 Requires at least: 4.6
 Tested up to: 5.8
 Requires PHP: 5.3
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv3+
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -55,7 +55,12 @@ If you spot any WordPress core comment functionality that should have been remov
 
 == Changelog ==
 
+= 1.0.1 =
+Release Date: January 27th, 2022
+
+- Fix removing comment items from the network admin bar.
+
 = 1.0 =
 Release Date: November 25th, 2021
 
-Initial release.
+- Initial release.

@@ -8,7 +8,7 @@
  * Plugin Name:       Uncomment
  * Plugin URI:        https://github.com/functionsfile/uncomment/
  * Text Domain:       uncomment
- * Version:           1.0.0
+ * Version:           1.0.1
  * Requires PHP:      5.3.0
  * Requires at least: 4.6.0
  * GitHub Plugin URI: functionsfile/uncomment
@@ -26,6 +26,7 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
+define( 'UNCOMMENT_PLUGIN_BASENAME', plugin_basename( __FILE__ ) );
 define( 'UNCOMMENT_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'UNCOMMENT_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 
@@ -35,9 +36,6 @@ require_once UNCOMMENT_PLUGIN_DIR . 'includes/rewrites.php';
 require_once UNCOMMENT_PLUGIN_DIR . 'includes/xmlrpc.php';
 
 if ( is_admin() ) {
-
-	define( 'UNCOMMENT_PLUGIN_BASENAME', plugin_basename( __FILE__ ) );
-
 	require_once UNCOMMENT_PLUGIN_DIR . 'includes/admin.php';
 }
 
