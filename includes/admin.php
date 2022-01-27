@@ -34,6 +34,15 @@ add_filter( 'show_recent_comments_widget_style', '__return_false' );
 // Enqueue editor script.
 add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\remove_comments_block' );
 
+// Remove Akismet plugin "At a Glance" section.
+add_action(
+	'rightnow_end',
+	function() {
+		remove_action( 'rightnow_end', array( 'Akismet_Admin', 'rightnow_stats' ), 10 );
+	},
+	9
+);
+
 /**
  * Remove admin pages.
  *

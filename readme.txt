@@ -59,6 +59,7 @@ If you spot any WordPress core comment functionality that should have been remov
 Release Date: January 27th, 2022
 
 - Fix removing comment items from the network admin bar.
+- Remove Akismet plugin "At a Glance" section.
 
 = 1.0 =
 Release Date: November 25th, 2021
