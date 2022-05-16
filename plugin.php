@@ -8,7 +8,7 @@
  * Plugin Name:       Uncomment
  * Plugin URI:        https://github.com/functionsfile/uncomment/
  * Text Domain:       uncomment
- * Version:           1.0.1
+ * Version:           1.0.3
  * Requires PHP:      5.3.0
  * Requires at least: 4.6.0
  * GitHub Plugin URI: functionsfile/uncomment
