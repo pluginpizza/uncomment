@@ -2,7 +2,7 @@
 Contributors: functionsfile, barryceelen
 Tags: comments, disable comments, spam comments, disable, remove, remove comments
 Requires at least: 4.6
-Tested up to: 6.0
+Tested up to: 5.8
 Requires PHP: 5.3
 Stable tag: 1.0.3
 License: GPLv3+
@@ -69,10 +69,12 @@ Note that Uncomment aims to not touch any existing content. Comment-related bloc
 
 = 1.0.2 =
 Release Date: January 27th, 2022
+
 - Update tested up to version.
 
 = 1.0.1 =
 Release Date: January 27th, 2022
+
 - Fix removing comment items from the network admin bar.
 - Remove Akismet plugin "At a Glance" section.
 
