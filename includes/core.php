@@ -33,6 +33,9 @@ add_filter( 'comments_template', __NAMESPACE__ . '\comments_template' );
 // Remove comments popup.
 add_filter( 'query_vars', __NAMESPACE__ . '\filter_query_vars' );
 
+// Replace core comment blocks output with an empty string.
+add_filter( 'render_block', __NAMESPACE__ . '\replace_comment_blocks_output', 99, 2 );
+
 /**
  * Prevent running a query in wp_count_comments().
  *
@@ -201,4 +204,29 @@ function filter_query_vars( $public_query_vars ) {
 	}
 
 	return $public_query_vars;
+}
+
+/**
+ * Replace core comment blocks output with an empty string.
+ *
+ * We're using the 'render_block' filter instead of replacing the render_callback via the
+ * 'register_block_type_args' filter. The latter allows us to replace the block content
+ * but will still output the wrapping div.
+ *
+ * @param string $block_content The block content about to be appended.
+ * @param array  $block         The full block, including name and attributes.
+ * @return array
+ */
+function replace_comment_blocks_output( $block_content, $block ) {
+
+	if ( isset( $block['blockName'] ) ) {
+
+		$comment_block_names = \Uncomment\Helpers\get_comment_block_names();
+
+		if ( in_array( $block['blockName'], $comment_block_names, true ) ) {
+			$block_content = '';
+		}
+	}
+
+	return $block_content;
 }
