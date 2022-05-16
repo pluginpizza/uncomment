@@ -31,8 +31,8 @@ add_action( 'widgets_init', __NAMESPACE__ . '\unregister_comment_widget', 1 );
 // Unregister the core comment widget styles.
 add_filter( 'show_recent_comments_widget_style', '__return_false' );
 
-// Enqueue editor script.
-add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\remove_comments_block' );
+// Remove core comment blocks from the inserter.
+add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\remove_comments_blocks_from_inserter' );
 
 // Remove Akismet plugin "At a Glance" section.
 add_action(
@@ -162,16 +162,26 @@ function unregister_comment_widget() {
 }
 
 /**
- * Unregister the core recent comments block.
+ * Remove core comment blocks from the inserter.
+ *
+ * Note that instead of unregistering comment-related blocks via the unregisterBlockType() function,
+ * we'll remove them from the block inserter to prevent adding comment blocks to a post.
+ *
+ * - Unregistering a block may lead to an error notice when editing a post that already contains a
+ *   comment block. The Uncomment plugin aims to not touch existing content.
+ * - Prevent possible race condition when trying to unregister blocks.
  *
  * @return void
  */
-function remove_comments_block() {
+function remove_comments_blocks_from_inserter() {
+
+	$comment_block_names = wp_json_encode( \Uncomment\Helpers\get_comment_block_names() );
 
 	$script = <<<TAG
 (function(){
+	var commentBlockNames = ${comment_block_names};
 	wp.hooks.addFilter('blocks.registerBlockType', 'uncomment/exclude-blocks', function(settings, name) {
-		if ( 'core/latest-comments' === name ) {
+		if ( commentBlockNames.indexOf(name) !== -1 ) {
 			return Object.assign({}, settings, {
 				supports: Object.assign({}, settings.supports, {inserter: false})
 			});
