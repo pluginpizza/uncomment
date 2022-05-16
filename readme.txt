@@ -67,9 +67,12 @@ Release Date: May 16th, 2022
 
 Note that Uncomment aims to not touch any existing content. Comment-related blocks that have already been added to a post will still be visible in the editor. They will not be rendered when a site visitor views the post.
 
+= 1.0.2 =
+Release Date: January 27th, 2022
+- Update tested up to version.
+
 = 1.0.1 =
 Release Date: January 27th, 2022
-
 - Fix removing comment items from the network admin bar.
 - Remove Akismet plugin "At a Glance" section.
 
