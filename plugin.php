@@ -30,6 +30,7 @@ define( 'UNCOMMENT_PLUGIN_BASENAME', plugin_basename( __FILE__ ) );
 define( 'UNCOMMENT_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'UNCOMMENT_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 
+require_once UNCOMMENT_PLUGIN_DIR . 'includes/helpers.php';
 require_once UNCOMMENT_PLUGIN_DIR . 'includes/core.php';
 require_once UNCOMMENT_PLUGIN_DIR . 'includes/feeds.php';
 require_once UNCOMMENT_PLUGIN_DIR . 'includes/rewrites.php';
