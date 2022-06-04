@@ -2,7 +2,7 @@
 Contributors: functionsfile, barryceelen
 Tags: comments, disable comments, spam comments, disable, remove, remove comments
 Requires at least: 4.6
-Tested up to: 5.8
+Tested up to: 6.0
 Requires PHP: 5.3
 Stable tag: 1.0.3
 License: GPLv3+
