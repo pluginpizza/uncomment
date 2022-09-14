@@ -59,6 +59,11 @@ If you spot any WordPress core comment functionality that should have been remov
 
 == Changelog ==
 
+= 1.0.4 =
+Release Date: September 14th, 2022
+
+- Remove Akismet plugin notice. Useful on multisite installs where Akismet is network activated or on VIP Go environments.
+
 = 1.0.3 =
 Release Date: May 16th, 2022
 
