@@ -35,13 +35,10 @@ add_filter( 'show_recent_comments_widget_style', '__return_false' );
 add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\remove_comments_blocks_from_inserter' );
 
 // Remove Akismet plugin "At a Glance" section.
-add_action(
-	'rightnow_end',
-	function() {
-		remove_action( 'rightnow_end', array( 'Akismet_Admin', 'rightnow_stats' ), 10 );
-	},
-	9
-);
+add_action( 'rightnow_end', __NAMESPACE__ . '\akismet_remove_at_a_glance', 9 );
+
+// Remove Akismet plugin "Set up your Akismet account" notice.
+add_action( 'admin_notices', __NAMESPACE__ . '\akismet_remove_notice', 9 );
 
 /**
  * Remove admin pages.
@@ -192,4 +189,28 @@ function remove_comments_blocks_from_inserter() {
 TAG;
 
 	wp_add_inline_script( 'wp-blocks', $script, 'after' );
+}
+
+/**
+ * Remove Akismet plugin "At a Glance" section.
+ *
+ * Useful on multisite installs where Akismet is network activated or on VIP Go.
+ *
+ * @return void
+ */
+function akismet_remove_at_a_glance() {
+
+	remove_action( 'rightnow_end', array( 'Akismet_Admin', 'rightnow_stats' ), 10 );
+}
+
+/**
+ * Remove Akismet plugin "Set up your Akismet account" notice.
+ *
+ * Useful on multisite installs where Akismet is network activated or on VIP Go.
+ *
+ * @return void
+ */
+function akismet_remove_notice() {
+
+	remove_action( 'admin_notices', array( 'Akismet_Admin', 'display_notice' ), 10 );
 }

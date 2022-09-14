@@ -4,7 +4,7 @@ Tags: comments, disable comments, spam comments, disable, remove, remove comment
 Requires at least: 4.6
 Tested up to: 6.0
 Requires PHP: 5.3
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 License: GPLv3+
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -58,6 +58,11 @@ Uncomment uses WordPress core actions, filters and functions to hide or disable 
 If you spot any WordPress core comment functionality that should have been removed by the Uncomment plugin, please let us know by opening an [issue](https://github.com/functionsfile/uncomment/issues/) or [pull request](https://github.com/functionsfile/uncomment/pulls/) on Github.
 
 == Changelog ==
+
+= 1.0.4 =
+Release Date: September 14th, 2022
+
+- Remove Akismet plugin notice. Useful on multisite installs where Akismet is network activated or on VIP Go environments.
 
 = 1.0.3 =
 Release Date: May 16th, 2022
