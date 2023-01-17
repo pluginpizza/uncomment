@@ -30,6 +30,8 @@ add_action(
 		 * WordPress 6.1.0 introduces filters that allows us to specify whether
 		 * to display the post comments feed link.
 		 *
+		 * @see https://core.trac.wordpress.org/changeset/54161
+		 *
 		 * For versions lower than 6.1.0 we'll replace the core feed_links_extra
 		 * function with our own near-identical one.
 		 */
