@@ -77,7 +77,7 @@ function feed_links_extra( $args = array() ) {
 
 	$defaults = array(
 		/* translators: Separator between blog name and feed type in feed links */
-		'separator'     => _x( '&raquo;', 'feed link' ),
+		'separator'     => _x( '&raquo;', 'feed link', 'default' ),
 		/* translators: 1: blog name, 2: separator(raquo), 3: post title */
 		'singletitle'   => __( '%1$s %2$s %3$s Comments Feed', 'default' ),
 		/* translators: 1: blog name, 2: separator(raquo), 3: category name */
