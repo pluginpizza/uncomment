@@ -4,7 +4,7 @@ Tags: comments, disable comments, spam comments, disable, remove, remove comment
 Requires at least: 4.6
 Tested up to: 6.0
 Requires PHP: 5.3
-Stable tag: 1.0.4
+Stable tag: 1.1.0
 License: GPLv3+
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -58,6 +58,14 @@ Uncomment uses WordPress core actions, filters and functions to hide or disable 
 If you spot any WordPress core comment functionality that should have been removed by the Uncomment plugin, please let us know by opening an [issue](https://github.com/functionsfile/uncomment/issues/) or [pull request](https://github.com/functionsfile/uncomment/pulls/) on Github.
 
 == Changelog ==
+
+= 1.1.0 =
+Release Date: January 17th, 2023
+
+- Add missing i18n namespace
+- Use filters to remove comment feed links for WP version => 6.1.0
+
+WordPress 6.1.0 [introduces filters](https://core.trac.wordpress.org/changeset/54161) that allow us to specify whether to display the post comments feed link. For versions lower than 6.1.0 we'll still replace the core [feed_links_extra()](https://developer.wordpress.org/reference/functions/feed_links_extra/) function with [our own near-identical one](https://github.com/functionsfile/uncomment/blob/main/includes/feeds.php#L41).
 
 = 1.0.4 =
 Release Date: September 14th, 2022
