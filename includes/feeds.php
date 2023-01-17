@@ -22,9 +22,26 @@ add_filter( 'get_comments_link', '__return_empty_string' );
 // Remove comments feed link.
 add_filter( 'feed_links_show_comments_feed', '__return_false' );
 
-// Replace extra feed links, removing the post comment feeds.
-remove_action( 'wp_head', 'feed_links_extra', 3 );
-add_action( 'wp_head', __NAMESPACE__ . '\feed_links_extra', 3 );
+// Remove or replace extra feed links, removing the post comment feeds.
+add_action(
+	'init',
+	function() {
+		/*
+		 * WordPress 6.1.0 introduces filters that allows us to specify whether
+		 * to display the post comments feed link.
+		 *
+		 * For versions lower than 6.1.0 we'll replace the core feed_links_extra
+		 * function with our own near-identical one.
+		 */
+		if ( version_compare( get_bloginfo( 'version' ), '6.1.0 ', '>=' ) ) {
+			add_filter( 'feed_links_extra_show_post_comments_feed', '__return_false' );
+			add_filter( 'feed_links_show_comments_feed', '__return_false' );
+		} else {
+			remove_action( 'wp_head', 'feed_links_extra', 3 );
+			add_action( 'wp_head', __NAMESPACE__ . '\feed_links_extra', 3 );
+		}
+	}
+);
 
 // Redirect requests for a comment feed.
 add_action( 'template_redirect', __NAMESPACE__ . '\filter_query', 9 );
@@ -60,7 +77,7 @@ function feed_links_extra( $args = array() ) {
 
 	$defaults = array(
 		/* translators: Separator between blog name and feed type in feed links */
-		'separator'     => _x( '&raquo;', 'feed link' ),
+		'separator'     => _x( '&raquo;', 'feed link', 'default' ),
 		/* translators: 1: blog name, 2: separator(raquo), 3: post title */
 		'singletitle'   => __( '%1$s %2$s %3$s Comments Feed', 'default' ),
 		/* translators: 1: blog name, 2: separator(raquo), 3: category name */
