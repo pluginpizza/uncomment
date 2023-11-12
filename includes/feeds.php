@@ -66,33 +66,34 @@ function filter_wp_headers( $headers ) {
 /**
  * Display the links to the extra feeds such as category feeds.
  *
- * Note that this is a near-clone of the core feed_links_extra()
- * function, except that we remove the is_singular() conditional.
+ * Note that this is a near-clone of the core feed_links_extra() function from
+ * WordPress core version 6.0.6, except that we remove the is_singular()
+ * conditional, add the 'default' namespace to i18n functions and add additional
+ * escaping.
  *
- * The core function will add the comment feed link if a
- * post has existing comments, which we cannot seem to circumvent
- * without actually deleting existing comments.
+ * The core function will add the comment feed link if a post has existing
+ * comments, which we cannot seem to circumvent without actually deleting
+ * existing comments.
  *
  * @param array $args Optional arguments.
  */
 function feed_links_extra( $args = array() ) {
-
 	$defaults = array(
-		/* translators: Separator between blog name and feed type in feed links */
+		/* translators: Separator between blog name and feed type in feed links. */
 		'separator'     => _x( '&raquo;', 'feed link', 'default' ),
-		/* translators: 1: blog name, 2: separator(raquo), 3: post title */
+		/* translators: 1: Blog name, 2: Separator (raquo), 3: Post title. */
 		'singletitle'   => __( '%1$s %2$s %3$s Comments Feed', 'default' ),
-		/* translators: 1: blog name, 2: separator(raquo), 3: category name */
+		/* translators: 1: Blog name, 2: Separator (raquo), 3: Category name. */
 		'cattitle'      => __( '%1$s %2$s %3$s Category Feed', 'default' ),
-		/* translators: 1: blog name, 2: separator(raquo), 3: tag name */
+		/* translators: 1: Blog name, 2: Separator (raquo), 3: Tag name. */
 		'tagtitle'      => __( '%1$s %2$s %3$s Tag Feed', 'default' ),
-		/* translators: 1: blog name, 2: separator(raquo), 3: term name, 4: taxonomy singular name */
+		/* translators: 1: Blog name, 2: Separator (raquo), 3: Term name, 4: Taxonomy singular name. */
 		'taxtitle'      => __( '%1$s %2$s %3$s %4$s Feed', 'default' ),
-		/* translators: 1: blog name, 2: separator(raquo), 3: author name  */
+		/* translators: 1: Blog name, 2: Separator (raquo), 3: Author name. */
 		'authortitle'   => __( '%1$s %2$s Posts by %3$s Feed', 'default' ),
-		/* translators: 1: blog name, 2: separator(raquo), 3: search phrase */
+		/* translators: 1: Blog name, 2: Separator (raquo), 3: Search query. */
 		'searchtitle'   => __( '%1$s %2$s Search Results for &#8220;%3$s&#8221; Feed', 'default' ),
-		/* translators: 1: blog name, 2: separator(raquo), 3: post type name */
+		/* translators: 1: Blog name, 2: Separator (raquo), 3: Post type name. */
 		'posttypetitle' => __( '%1$s %2$s %3$s Feed', 'default' ),
 	);
 
@@ -122,28 +123,24 @@ function feed_links_extra( $args = array() ) {
 			$href  = get_tag_feed_link( $term->term_id );
 		}
 	} elseif ( is_tax() ) {
-		$term  = get_queried_object();
-		$tax   = get_taxonomy( $term->taxonomy );
-		$title = sprintf( $args['taxtitle'], get_bloginfo( 'name' ), $args['separator'], $term->name, $tax->labels->singular_name );
-		$href  = get_term_feed_link( $term->term_id, $term->taxonomy );
+		$term = get_queried_object();
+
+		if ( $term ) {
+			$tax   = get_taxonomy( $term->taxonomy );
+			$title = sprintf( $args['taxtitle'], get_bloginfo( 'name' ), $args['separator'], $term->name, $tax->labels->singular_name );
+			$href  = get_term_feed_link( $term->term_id, $term->taxonomy );
+		}
 	} elseif ( is_author() ) {
-		$author_id = intval( get_query_var( 'author' ) );
+		$author_id = (int) get_query_var( 'author' );
 
 		$title = sprintf( $args['authortitle'], get_bloginfo( 'name' ), $args['separator'], get_the_author_meta( 'display_name', $author_id ) );
 		$href  = get_author_feed_link( $author_id );
 	} elseif ( is_search() ) {
 		$title = sprintf( $args['searchtitle'], get_bloginfo( 'name' ), $args['separator'], get_search_query( false ) );
 		$href  = get_search_feed_link();
-	} elseif ( is_post_type_archive() ) {
-		$title         = sprintf( $args['posttypetitle'], get_bloginfo( 'name' ), $args['separator'], post_type_archive_title( '', false ) );
-		$post_type_obj = get_queried_object();
-		if ( $post_type_obj ) {
-			$href = get_post_type_archive_feed_link( $post_type_obj->name );
-		}
 	}
 
 	if ( isset( $title ) && isset( $href ) ) {
-		// phpcs:ignore
 		echo '<link rel="alternate" type="' . esc_attr( feed_content_type() ) . '" title="' . esc_attr( $title ) . '" href="' . esc_url( $href ) . '" />' . "\n";
 	}
 }
