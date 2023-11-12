@@ -59,6 +59,12 @@ If you spot any WordPress core comment functionality that should have been remov
 
 == Changelog ==
 
+= 1.2.0 =
+Release Date: November 13th, 2023
+
+- Update tested up to version.
+- Update cloned comment_feed_links() function for WP version < 6.1.0
+
 = 1.1.0 =
 Release Date: January 17th, 2023
 
