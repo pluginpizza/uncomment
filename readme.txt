@@ -59,6 +59,12 @@ If you spot any WordPress core comment functionality that should have been remov
 
 == Changelog ==
 
+= 1.2.1 =
+Release Date: December 19th, 2023
+
+- Fix missing exclusion for the core/comments block.
+- Fix deprecated ${var} in strings. Props @claytoncollie
+
 = 1.2.0 =
 Release Date: November 13th, 2023
 
