@@ -21,6 +21,7 @@ function get_comment_block_names() {
 		'core/comment-edit-link',
 		'core/comment-reply-link',
 		'core/comment-template',
+		'core/comments',
 		'core/comments-pagination',
 		'core/comments-pagination-next',
 		'core/comments-pagination-numbers',
@@ -32,4 +33,3 @@ function get_comment_block_names() {
 		'core/post-comments-form',
 	);
 }
-
