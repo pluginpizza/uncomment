@@ -176,7 +176,7 @@ function remove_comments_blocks_from_inserter() {
 
 	$script = <<<TAG
 (function(){
-	var commentBlockNames = ${comment_block_names};
+	var commentBlockNames = {$comment_block_names};
 	wp.hooks.addFilter('blocks.registerBlockType', 'uncomment/exclude-blocks', function(settings, name) {
 		if ( commentBlockNames.indexOf(name) !== -1 ) {
 			return Object.assign({}, settings, {
