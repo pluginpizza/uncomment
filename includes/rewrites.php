@@ -2,10 +2,10 @@
 /**
  * Functionality related to rewrite rules
  *
- * @package Uncomment
+ * @package PluginPizza\Uncomment
  */
 
-namespace Uncomment\Rewrites;
+namespace PluginPizza\Uncomment\Rewrites;
 
 // Remove rewrite rules for comment feed archives.
 add_filter( 'comments_rewrite_rules', '__return_empty_array', 99 );

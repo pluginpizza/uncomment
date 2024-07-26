@@ -2,10 +2,10 @@
 /**
  * Core plugin functionality
  *
- * @package Uncomment
+ * @package PluginPizza\Uncomment
  */
 
-namespace Uncomment;
+namespace PluginPizza\Uncomment;
 
 // Prevent running query in wp_count_comments().
 add_filter( 'wp_count_comments', __NAMESPACE__ . '\filter_wp_count_comments' );
@@ -221,7 +221,7 @@ function replace_comment_blocks_output( $block_content, $block ) {
 
 	if ( isset( $block['blockName'] ) ) {
 
-		$comment_block_names = \Uncomment\Helpers\get_comment_block_names();
+		$comment_block_names = \PluginPizza\Uncomment\Helpers\get_comment_block_names();
 
 		if ( in_array( $block['blockName'], $comment_block_names, true ) ) {
 			$block_content = '';

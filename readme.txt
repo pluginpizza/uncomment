@@ -1,8 +1,8 @@
 === Uncomment — Disable Comments ===
-Contributors: functionsfile, barryceelen
-Tags: comments, disable comments, spam comments, disable, remove, remove comments
+Contributors: pluginpizza, barryceelen, functionsfile
+Tags: comments, disable comments, spam comments, disable, remove comments
 Requires at least: 4.6
-Tested up to: 6.4
+Tested up to: 6.6
 Requires PHP: 5.3
 Stable tag: 1.2.1
 License: GPLv3+
@@ -18,7 +18,9 @@ While WordPress allows you to disable comments site-wide via the comments settin
 
 Starting with Uncomment consists of just two steps: installing and activating the plugin. Uncomment is designed to disable or hide commenting functionality on your WordPress site without any additional settings. Uncomment also works great as a must-use plugin.
 
-Did we miss anything? Leave us a note on [Github](https://github.com/functionsfile/uncomment/issues/)
+### Bug Reports
+
+Do you want to report a bug or suggest a feature for Uncomment? Best to do so in the [Uncomment repository on GitHub](https://github.com/pluginpizza/uncomment/).
 
 == Installation ==
 
@@ -55,7 +57,7 @@ Uncomment is designed to completely disable or hide all comments and commenting 
 
 Uncomment uses WordPress core actions, filters and functions to hide or disable comments and comment-related elements. It is possible that your theme or another plugin uses its own custom comment elements or functions. In that case, the Uncomment plugin is unable to remove those elements.
 
-If you spot any WordPress core comment functionality that should have been removed by the Uncomment plugin, please let us know by opening an [issue](https://github.com/functionsfile/uncomment/issues/) or [pull request](https://github.com/functionsfile/uncomment/pulls/) on Github.
+If you spot any WordPress core comment functionality that should have been removed by the Uncomment plugin, please let us know by opening an [issue](https://github.com/pluginpizza/uncomment/issues/) or [pull request](https://github.com/pluginpizza/uncomment/pulls/) on Github.
 
 == Changelog ==
 
@@ -77,7 +79,7 @@ Release Date: January 17th, 2023
 - Add missing i18n namespace
 - Use filters to remove comment feed links for WP version => 6.1.0
 
-WordPress 6.1.0 [introduces filters](https://core.trac.wordpress.org/changeset/54161) that allow us to specify whether to display the post comments feed link. For versions lower than 6.1.0 we'll still replace the core [feed_links_extra()](https://developer.wordpress.org/reference/functions/feed_links_extra/) function with [our own near-identical one](https://github.com/functionsfile/uncomment/blob/main/includes/feeds.php#L41).
+WordPress 6.1.0 [introduces filters](https://core.trac.wordpress.org/changeset/54161) that allow us to specify whether to display the post comments feed link. For versions lower than 6.1.0 we'll still replace the core [feed_links_extra()](https://developer.wordpress.org/reference/functions/feed_links_extra/) function with [our own near-identical one](https://github.com/pluginpizza/uncomment/blob/main/includes/feeds.php#L41).
 
 = 1.0.4 =
 Release Date: September 14th, 2022

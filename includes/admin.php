@@ -2,10 +2,10 @@
 /**
  * Functionality specific to the admin
  *
- * @package Uncomment
+ * @package PluginPizza\Uncomment
  */
 
-namespace Uncomment\Admin;
+namespace PluginPizza\Uncomment\Admin;
 
 // Remove admin pages.
 add_action( 'admin_init', __NAMESPACE__ . '\remove_admin_pages' );
@@ -172,7 +172,7 @@ function unregister_comment_widget() {
  */
 function remove_comments_blocks_from_inserter() {
 
-	$comment_block_names = wp_json_encode( \Uncomment\Helpers\get_comment_block_names() );
+	$comment_block_names = wp_json_encode( \PluginPizza\Uncomment\Helpers\get_comment_block_names() );
 
 	$script = <<<TAG
 (function(){

@@ -2,10 +2,10 @@
 /**
  * Functionality related to XML-RPC endpoints
  *
- * @package Uncomment
+ * @package PluginPizza\Uncomment
  */
 
-namespace Uncomment\XMLRPC;
+namespace PluginPizza\Uncomment\XMLRPC;
 
 // Replace xmlrpc methods.
 add_filter( 'xmlrpc_methods', __NAMESPACE__ . '\replace_xmlrpc_methods' );
@@ -46,7 +46,7 @@ function replace_xmlrpc_methods( $methods ) {
  */
 function xmlrpc_placeholder_method() {
 
-	return new IXR_Error(
+	return new \IXR_Error(
 		403,
 		__( 'Comments are closed.', 'default' )
 	);

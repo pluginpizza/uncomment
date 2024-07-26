@@ -2,10 +2,10 @@
 /**
  * Contains plugin helper functions
  *
- * @package Uncomment
+ * @package PluginPizza\Uncomment
  */
 
-namespace Uncomment\Helpers;
+namespace PluginPizza\Uncomment\Helpers;
 
 /**
  * Get the names of all core comment-related blocks.

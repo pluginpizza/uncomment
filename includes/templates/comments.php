@@ -2,7 +2,7 @@
 /**
  * Replacement for the theme's comments.php file.
  *
- * @package Uncomment
+ * @package PluginPizza\Uncomment
  *
  * phpcs:ignore Squiz.Commenting.FileComment.SpacingAfterComment
  */

@@ -32,4 +32,4 @@ Uncomment is designed to completely disable or hide all comments and commenting 
 
 Uncomment uses WordPress core actions, filters and functions to hide or disable comments and comment-related elements. It is possible that your theme or another plugin uses its own custom comment elements or functions. In that case, the Uncomment plugin is unable to remove those elements.
 
-If you spot any WordPress core comment functionality that should have been removed by the Uncomment plugin, please let us know by opening an [issue](https://github.com/functionsfile/uncomment/issues) or [pull request](https://github.com/functionsfile/uncomment/pulls).
+If you spot any WordPress core comment functionality that should have been removed by the Uncomment plugin, please let us know by opening an [issue](https://github.com/pluginpizza/uncomment/issues) or [pull request](https://github.com/pluginpizza/uncomment/pulls).

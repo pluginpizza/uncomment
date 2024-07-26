@@ -1,19 +1,19 @@
 <?php
 /**
- * Author URI:        https://functionsfile.com/
- * Author:            Functions File, Barry Ceelen
+ * Author URI:        https://plugin.pizza/
+ * Author:            Plugin Pizza
  * Description:       Your one-stop shop for removing WordPress comment functionality.
  * Domain Path:       /languages
  * License:           GPLv3+
  * Plugin Name:       Uncomment
- * Plugin URI:        https://github.com/functionsfile/uncomment/
+ * Plugin URI:        https://github.com/pluginpizza/uncomment/
  * Text Domain:       uncomment
  * Version:           1.2.1
  * Requires PHP:      5.3.0
  * Requires at least: 4.6.0
- * GitHub Plugin URI: functionsfile/uncomment
+ * GitHub Plugin URI: pluginpizza/uncomment
  *
- * @package Uncomment
+ * @package PluginPizza\Uncomment
  *
  * Based on a refactor of the "Remove Comments Absolutely" plugin by Frank Bueltge.
  * https://github.com/bueltge/remove-comments-absolutely/pull/27

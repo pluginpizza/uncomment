@@ -2,10 +2,10 @@
 /**
  * Functionality related to feeds
  *
- * @package Uncomment
+ * @package PluginPizza\Uncomment
  */
 
-namespace Uncomment\Feeds;
+namespace PluginPizza\Uncomment\Feeds;
 
 // Set the content of <wfw:commentRss> to an empty string.
 add_filter( 'post_comments_feed_link', '__return_empty_string' );
