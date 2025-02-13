@@ -8,7 +8,7 @@ Stable tag: 1.2.1
 License: GPLv3+
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-Your one-stop shop to completely remove all comment functionality from your theme and administration screens.
+Your one-stop shop to completely disable comments and remove all comment functionality from your theme and administration screens.
 
 == Description ==
 
