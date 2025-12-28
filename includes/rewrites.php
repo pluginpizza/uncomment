@@ -42,4 +42,3 @@ function filter_rewrite_rules_array( $rules ) {
 
 	return $rules;
 }
-

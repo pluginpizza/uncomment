@@ -25,7 +25,7 @@ add_filter( 'feed_links_show_comments_feed', '__return_false' );
 // Remove or replace extra feed links, removing the post comment feeds.
 add_action(
 	'init',
-	function() {
+	function () {
 		/*
 		 * WordPress 6.1.0 introduces filters that allows us to specify whether
 		 * to display the post comments feed link.

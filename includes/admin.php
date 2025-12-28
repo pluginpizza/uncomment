@@ -104,7 +104,7 @@ function remove_commentsdiv_meta_box() {
  */
 function remove_welcome_panel_item() {
 
-	$script = <<<TAG
+	$script = <<<'TAG'
 (function(){
 	document.addEventListener( 'DOMContentLoaded', function() {
 		var el = document.querySelector( '.welcome-comments' );
