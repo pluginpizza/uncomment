@@ -140,6 +140,10 @@ function close_comments( $open, $post_id ) {
  */
 function remove_admin_bar_comment_items( $wp_admin_bar ) {
 
+	if ( ! is_a( '\WP_Admin_Bar', $wp_admin_bar ) ) {
+		return;
+	}
+
 	if ( ! is_admin_bar_showing() ) {
 		return;
 	}
@@ -164,6 +168,10 @@ function remove_admin_bar_network_comment_items() {
 	}
 
 	global $wp_admin_bar;
+
+	if ( ! $wp_admin_bar || ! is_a( '\WP_Admin_Bar', $wp_admin_bar ) ) {
+		return;
+	}
 
 	if ( ! function_exists( 'is_plugin_active_for_network' ) ) {
 		require_once ABSPATH . '/wp-admin/includes/plugin.php';
