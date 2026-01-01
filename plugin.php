@@ -10,7 +10,7 @@
  * Text Domain:       uncomment
  * Version:           1.2.1
  * Requires PHP:      5.3.0
- * Requires at least: 4.6.0
+ * Requires at least: 4.6
  * GitHub Plugin URI: pluginpizza/uncomment
  *
  * @package PluginPizza\Uncomment
