@@ -7,6 +7,8 @@
 
 namespace PluginPizza\Uncomment\Rewrites;
 
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 // Remove rewrite rules for comment feed archives.
 add_filter( 'comments_rewrite_rules', '__return_empty_array', 99 );
 

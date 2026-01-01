@@ -7,6 +7,8 @@
 
 namespace PluginPizza\Uncomment\Helpers;
 
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 /**
  * Get the names of all core comment-related blocks.
  *

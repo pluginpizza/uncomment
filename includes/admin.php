@@ -7,6 +7,8 @@
 
 namespace PluginPizza\Uncomment\Admin;
 
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 // Remove admin pages.
 add_action( 'admin_init', __NAMESPACE__ . '\remove_admin_pages' );
 

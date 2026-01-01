@@ -7,6 +7,8 @@
 
 namespace PluginPizza\Uncomment\Feeds;
 
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 // Set the content of <wfw:commentRss> to an empty string.
 add_filter( 'post_comments_feed_link', '__return_empty_string' );
 

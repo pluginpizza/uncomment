@@ -22,9 +22,7 @@
  */
 
 // If this file is called directly, abort.
-if ( ! defined( 'WPINC' ) ) {
-	die;
-}
+if ( ! defined( 'ABSPATH' ) ) exit;
 
 define( 'UNCOMMENT_PLUGIN_BASENAME', plugin_basename( __FILE__ ) );
 define( 'UNCOMMENT_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );

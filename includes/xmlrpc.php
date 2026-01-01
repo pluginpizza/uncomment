@@ -7,6 +7,8 @@
 
 namespace PluginPizza\Uncomment\XMLRPC;
 
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 // Replace xmlrpc methods.
 add_filter( 'xmlrpc_methods', __NAMESPACE__ . '\replace_xmlrpc_methods' );
 

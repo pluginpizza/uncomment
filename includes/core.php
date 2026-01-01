@@ -7,6 +7,8 @@
 
 namespace PluginPizza\Uncomment;
 
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 // Prevent running query in wp_count_comments().
 add_filter( 'wp_count_comments', __NAMESPACE__ . '\filter_wp_count_comments' );
 
