@@ -1,4 +1,4 @@
-=== Uncomment — Disable Comments ===
+=== Uncomment - Disable Comments ===
 Contributors: pluginpizza, barryceelen, functionsfile
 Tags: comments, disable comments, spam comments, disable, remove comments
 Requires at least: 4.6

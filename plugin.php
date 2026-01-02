@@ -4,7 +4,7 @@
  * Author:            Plugin Pizza
  * Description:       Your one-stop shop for removing WordPress comment functionality.
  * License:           GPLv3+
- * Plugin Name:       Uncomment
+ * Plugin Name:       Uncomment - Disable Comments
  * Plugin URI:        https://github.com/pluginpizza/uncomment/
  * Text Domain:       uncomment
  * Version:           1.2.1
