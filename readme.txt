@@ -4,7 +4,7 @@ Tags: comments, disable comments, spam comments, disable, remove comments
 Requires at least: 4.6
 Tested up to: 6.9
 Requires PHP: 5.3
-Stable tag: 1.2.1
+Stable tag: 1.3.0
 License: GPLv3+
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
