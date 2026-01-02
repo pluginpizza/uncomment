@@ -1,5 +1,5 @@
 === Uncomment - Disable Comments ===
-Contributors: pluginpizza, barryceelen, functionsfile
+Contributors: pluginpizza, barryceelen
 Tags: comments, disable comments, spam comments, disable, remove comments
 Requires at least: 4.6
 Tested up to: 6.9
@@ -47,7 +47,7 @@ Uncomment does not delete any existing comments from the database.
 
 = Does this plugin delete existing comment blocks from the post content? =
 
-Uncomment does not delete any existing comment blocks from the post content. It does prevent rendering comment blocks on your site by replacing their output with an empty string.
+Uncomment does not delete any existing comment blocks from the post content. It does prevent displaying comment blocks on your site by replacing their output with an empty string.
 
 = Can I enable comments for a specific post or post type? =
 
