@@ -81,6 +81,7 @@ function filter_wp_headers( $headers ) {
  */
 function feed_links_extra( $args = array() ) {
 	$defaults = array(
+		// phpcs:disable WordPress.WP.I18n.TextDomainMismatch -- We're using the 'default' domain to leverage existing WordPress core translations.
 		/* translators: Separator between blog name and feed type in feed links. */
 		'separator'     => _x( '&raquo;', 'feed link', 'default' ),
 		/* translators: 1: Blog name, 2: Separator (raquo), 3: Post title. */
@@ -97,6 +98,7 @@ function feed_links_extra( $args = array() ) {
 		'searchtitle'   => __( '%1$s %2$s Search Results for &#8220;%3$s&#8221; Feed', 'default' ),
 		/* translators: 1: Blog name, 2: Separator (raquo), 3: Post type name. */
 		'posttypetitle' => __( '%1$s %2$s %3$s Feed', 'default' ),
+		// phpcs:enable WordPress.WP.I18n.TextDomainMismatch
 	);
 
 	$args = wp_parse_args( $args, $defaults );

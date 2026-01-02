@@ -62,6 +62,7 @@ function remove_admin_pages() {
 		true
 	) ) {
 		wp_die(
+			// phpcs:ignore WordPress.WP.I18n.TextDomainMismatch -- "Comments are closed" is a core WP string, we're using the 'default' domain to leverage existing translations.
 			esc_html__( 'Comments are closed.', 'default' ),
 			'',
 			array( 'response' => 403 )

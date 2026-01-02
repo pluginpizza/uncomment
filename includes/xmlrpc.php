@@ -50,6 +50,7 @@ function xmlrpc_placeholder_method() {
 
 	return new \IXR_Error(
 		403,
+		// phpcs:ignore WordPress.WP.I18n.TextDomainMismatch -- "Comments are closed" is a core WP string, we're using the 'default' domain to leverage existing translations.
 		__( 'Comments are closed.', 'default' )
 	);
 }
