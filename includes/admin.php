@@ -107,20 +107,16 @@ function remove_commentsdiv_meta_box() {
  */
 function remove_welcome_panel_item() {
 
-	$script = <<<'TAG'
-(function(){
-	document.addEventListener( 'DOMContentLoaded', function() {
-		var el = document.querySelector( '.welcome-comments' );
-		if ( el ) {
-			el.parentNode.remove();
-		}
-	});
-})();
-TAG;
-
 	wp_add_inline_script(
 		'common',
-		$script
+		'(function(){
+			document.addEventListener( "DOMContentLoaded", function() {
+				var el = document.querySelector( ".welcome-comments" );
+				if ( el ) {
+					el.parentNode.remove();
+				}
+			});
+		})();'
 	);
 }
 
@@ -177,21 +173,21 @@ function remove_comments_blocks_from_inserter() {
 
 	$comment_block_names = wp_json_encode( \PluginPizza\Uncomment\Helpers\get_comment_block_names() );
 
-	$script = <<<TAG
-(function(){
-	var commentBlockNames = {$comment_block_names};
-	wp.hooks.addFilter('blocks.registerBlockType', 'uncomment/exclude-blocks', function(settings, name) {
-		if ( commentBlockNames.indexOf(name) !== -1 ) {
-			return Object.assign({}, settings, {
-				supports: Object.assign({}, settings.supports, {inserter: false})
+	wp_add_inline_script(
+		'wp-blocks',
+		"(function(){
+			var commentBlockNames = {$comment_block_names};
+			wp.hooks.addFilter('blocks.registerBlockType', 'uncomment/exclude-blocks', function(settings, name) {
+				if ( commentBlockNames.indexOf(name) !== -1 ) {
+					return Object.assign({}, settings, {
+						supports: Object.assign({}, settings.supports, {inserter: false})
+					});
+				}
+				return settings;
 			});
-		}
-		return settings;
-	});
-})();
-TAG;
-
-	wp_add_inline_script( 'wp-blocks', $script, 'after' );
+		})();",
+		'after'
+	);
 }
 
 /**
