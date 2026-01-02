@@ -61,6 +61,13 @@ If you spot any WordPress core comment functionality that should have been remov
 
 == Changelog ==
 
+= 1.2.2 =
+Release Date: January 2nd, 2026
+
+- Fix missing exclusions for new core comments blocks.
+- Fix incorrect use of is_a() when removing admin bar items.
+- Fix coding standards issues.
+
 = 1.2.1 =
 Release Date: December 19th, 2023
 
