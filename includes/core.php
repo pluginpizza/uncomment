@@ -142,7 +142,7 @@ function close_comments( $open, $post_id ) {
  */
 function remove_admin_bar_comment_items( $wp_admin_bar ) {
 
-	if ( ! is_a( '\WP_Admin_Bar', $wp_admin_bar ) ) {
+	if ( ! is_a( $wp_admin_bar, '\WP_Admin_Bar' ) ) {
 		return;
 	}
 
@@ -171,7 +171,7 @@ function remove_admin_bar_network_comment_items() {
 
 	global $wp_admin_bar;
 
-	if ( ! $wp_admin_bar || ! is_a( '\WP_Admin_Bar', $wp_admin_bar ) ) {
+	if ( ! $wp_admin_bar || ! is_a( $wp_admin_bar, '\WP_Admin_Bar' ) ) {
 		return;
 	}
 
