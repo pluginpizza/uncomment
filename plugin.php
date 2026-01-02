@@ -3,7 +3,6 @@
  * Author URI:        https://plugin.pizza/
  * Author:            Plugin Pizza
  * Description:       Your one-stop shop for removing WordPress comment functionality.
- * Domain Path:       /languages
  * License:           GPLv3+
  * Plugin Name:       Uncomment
  * Plugin URI:        https://github.com/pluginpizza/uncomment/
