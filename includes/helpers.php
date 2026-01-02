@@ -32,6 +32,8 @@ function get_comment_block_names() {
 		'core/comments-title',
 		'core/latest-comments',
 		'core/post-comments',
+		'core/post-comments-count',
 		'core/post-comments-form',
+		'core/post-comments-link',
 	);
 }
