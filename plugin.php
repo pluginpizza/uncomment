@@ -7,7 +7,7 @@
  * Plugin Name:       Uncomment - Disable Comments
  * Plugin URI:        https://github.com/pluginpizza/uncomment/
  * Text Domain:       uncomment
- * Version:           1.3.0
+ * Version:           1.2.2
  * Requires PHP:      5.3
  * Requires at least: 4.6
  * GitHub Plugin URI: pluginpizza/uncomment
